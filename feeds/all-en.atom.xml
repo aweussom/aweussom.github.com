@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>wossname?</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2020-03-15T11:25:00+01:00</updated><entry><title>Pelican to Github pages</title><link href="/pelican-github-pages.html" rel="alternate"></link><published>2020-03-15T10:54:00+01:00</published><updated>2020-03-15T11:25:00+01:00</updated><author><name>wossname?</name></author><id>tag:None,2020-03-15:/pelican-github-pages.html</id><summary type="html">&lt;p&gt;Using the Pelican publishing system to create blog on github pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following the instructions &lt;a href="https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html" title="Renata's blog"&gt;on Renata's blog&lt;/a&gt; I now have a working blog on Github Pages!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>wossname?</title><link href="/" rel="alternate"></link><link href="/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2020-03-15T11:25:00+01:00</updated><entry><title>Pelican to Github pages</title><link href="/pelican-github-pages.html" rel="alternate"></link><published>2020-03-15T10:54:00+01:00</published><updated>2020-03-15T11:25:00+01:00</updated><author><name>wossname?</name></author><id>tag:None,2020-03-15:/pelican-github-pages.html</id><summary type="html">&lt;p&gt;Using the Pelican publishing system to create blog on github pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following the instructions 
+&lt;a href="https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html" title="Renata's blog"&gt;on Renata's blog&lt;/a&gt;
+I now have a working blog on Github Pages!&lt;/p&gt;
 &lt;p&gt;The only addition was to create a python3 virtual environment, which was simple enough:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;python3 -m venv /home/pi/pelican&lt;/span&gt;
 &lt;span class="err"&gt;source /home/pi/pelican/bin/activate&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Read more about [Markdown] (https://daringfireball.net/projects/markdown/syntax)&lt;/p&gt;</content><category term="misc"></category><category term="first"></category><category term="misc"></category></entry></feed>
+&lt;p&gt;Read more about 
+&lt;a href="https://daringfireball.net/projects/markdown/syntax"&gt;Markdown&lt;/a&gt;&lt;/p&gt;</content><category term="misc"></category><category term="first"></category><category term="misc"></category></entry></feed>
