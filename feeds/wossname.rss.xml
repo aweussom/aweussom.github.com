@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>wossname? - wossname?</title><link>/</link><description></description><lastBuildDate>Sun, 15 Mar 2020 11:15:00 +0100</lastBuildDate><item><title>Pelican to Github pages</title><link>/pelican-github-pages.html</link><description>&lt;p&gt;Following the instructions [here] (https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html)&lt;/p&gt;
-&lt;p&gt;I now have a working blog.&lt;/p&gt;
+<rss version="2.0"><channel><title>wossname? - wossname?</title><link>/</link><description></description><lastBuildDate>Sun, 15 Mar 2020 11:25:00 +0100</lastBuildDate><item><title>Pelican to Github pages</title><link>/pelican-github-pages.html</link><description>&lt;p&gt;Following the instructions &lt;a href="https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html" title="Renata's blog"&gt;on Renata's blog&lt;/a&gt; I now have a working blog on Github Pages!&lt;/p&gt;
 &lt;p&gt;The only addition was to create a python3 virtual environment, which was simple enough:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;python3 -m venv /home/pi/pelican&lt;/span&gt;
 &lt;span class="err"&gt;source /home/pi/pelican/bin/activate&lt;/span&gt;
