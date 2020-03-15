@@ -1,6 +1,6 @@
 Title: Pelican to Github pages
 Date: 2020-03-15 10:54
-Modified: 2020-03-15 11:25
+Modified: 2020-03-15 11:30
 Category: misc
 Tags: first, misc
 Slug: pelican-github-pages
@@ -19,6 +19,7 @@ The only addition was to create a python3 virtual environment, which was simple 
 
 
 Read more about 
-[Markdown](https://daringfireball.net/projects/markdown/syntax)
+[Markdown](https://daringfireball.net/projects/markdown/syntax "Markdown syntax")
+
 
 
