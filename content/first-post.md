@@ -7,8 +7,7 @@ Slug: pelican-github-pages
 Authors: wossname?
 Summary: Using the Pelican publishing system to create blog on github pages
 
-Following the instructions [here]
-(https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html)
+Following the instructions [here] (https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html)
 
 I now have a working blog.
 
