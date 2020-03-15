@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>wossname?</title><link>/</link><description></description><lastBuildDate>Sun, 15 Mar 2020 11:05:00 +0100</lastBuildDate><item><title>Test of Pelican to Github pages</title><link>/pelican-github-pages.html</link><description>&lt;p&gt;With a bit of luck, I now have a blog....
-:-)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">wossname?</dc:creator><pubDate>Sun, 15 Mar 2020 10:54:00 +0100</pubDate><guid isPermaLink="false">tag:None,2020-03-15:/pelican-github-pages.html</guid><category>misc</category><category>first</category><category>misc</category></item></channel></rss>
+<rss version="2.0"><channel><title>wossname?</title><link>/</link><description></description><lastBuildDate>Sun, 15 Mar 2020 11:15:00 +0100</lastBuildDate><item><title>Pelican to Github pages</title><link>/pelican-github-pages.html</link><description>&lt;p&gt;Following the instructions here:
+https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html
+I now have a working blog.&lt;/p&gt;
+&lt;p&gt;The only addition was to create a python3 virtual environment, which was simple enough:
+python3 -m venv /home/pi/pelican
+source /home/pi/pelican/bin/activate&lt;/p&gt;
+&lt;p&gt;About Markdown:
+https://daringfireball.net/projects/markdown/syntax&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">wossname?</dc:creator><pubDate>Sun, 15 Mar 2020 10:54:00 +0100</pubDate><guid isPermaLink="false">tag:None,2020-03-15:/pelican-github-pages.html</guid><category>misc</category><category>first</category><category>misc</category></item></channel></rss>
