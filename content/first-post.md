@@ -1,6 +1,6 @@
-Title: Test av Pelican mot Github pages
+Title: Test of Pelican to Github pages
 Date: 2020-03-15 10:54
-Modified: 2020-03-15 10:54
+Modified: 2020-03-15 11:05
 Category: misc
 Tags: first, misc
 Slug: pelican-github-pages
