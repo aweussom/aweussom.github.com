@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0"><channel><title>wossname?</title><link>/</link><description></description><lastBuildDate>Thu, 19 Mar 2020 13:50:00 +0100</lastBuildDate><item><title>Platerecognizer SDK with Kerberos.io and Portainer on a Raspberry PI</title><link>/portainer-kerberos-io-platerecognizer.html</link><description>&lt;p&gt;Install Docker &amp;amp; Portainer:&lt;br&gt;
 &lt;a href="https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/" title="HowTo"&gt;HowTo&lt;/a&gt;  &lt;/p&gt;
-&lt;p&gt;(Pi-Hole is also handy, but not for this project)\
-For good instructions on installing Portainer, follow the above tutorial.\
-Here's a summary:\ 
+&lt;p&gt;(Pi-Hole is also handy, but not for this project)&lt;br&gt;
+For good instructions on installing Portainer, follow the above tutorial.&lt;br&gt;
+Here's a summary:&lt;br&gt;
 On the Raspberry Pi command line:  &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Install Docker on the &lt;ul&gt;
+&lt;li&gt;Install Docker&lt;ul&gt;
 &lt;li&gt;curl -sSL https://get.docker.com | sh&lt;/li&gt;
 &lt;li&gt;sudo usermod -aG docker pi&lt;/li&gt;
 &lt;li&gt;Log out &amp;amp; in again&lt;/li&gt;
