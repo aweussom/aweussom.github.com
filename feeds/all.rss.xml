@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>wossname?</title><link>/</link><description></description><lastBuildDate>Thu, 19 Mar 2020 13:50:00 +0100</lastBuildDate><item><title>Platerecognizer SDK with Kerberos.io and Portainer on a Raspberry PI</title><link>/portainer-kerberos-io-platerecognizer.html</link><description>&lt;p&gt;Install Docker &amp;amp; Portainer:&lt;br&gt;
+<rss version="2.0"><channel><title>wossname?</title><link>/</link><description></description><lastBuildDate>Thu, 19 Mar 2020 14:30:00 +0100</lastBuildDate><item><title>Platerecognizer SDK with Kerberos.io and Portainer on a Raspberry PI</title><link>/portainer-kerberos-io-platerecognizer.html</link><description>&lt;p&gt;Install Docker &amp;amp; Portainer:&lt;br&gt;
 &lt;a href="https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/" title="HowTo"&gt;HowTo&lt;/a&gt;  &lt;/p&gt;
 &lt;p&gt;(Pi-Hole is also handy, but not for this project)&lt;br&gt;
 For good instructions on installing Portainer, follow the above tutorial.&lt;br&gt;
