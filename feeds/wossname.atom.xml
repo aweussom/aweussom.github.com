@@ -1,5 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>wossname? - wossname?</title><link href="/" rel="alternate"></link><link href="/feeds/wossname.atom.xml" rel="self"></link><id>/</id><updated>2020-03-15T11:30:00+01:00</updated><entry><title>Pelican to Github pages</title><link href="/pelican-github-pages.html" rel="alternate"></link><published>2020-03-15T10:54:00+01:00</published><updated>2020-03-15T11:30:00+01:00</updated><author><name>wossname?</name></author><id>tag:None,2020-03-15:/pelican-github-pages.html</id><summary type="html">&lt;p&gt;Using the Pelican publishing system to create blog on github pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following the instructions 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>wossname? - wossname?</title><link href="/" rel="alternate"></link><link href="/feeds/wossname.atom.xml" rel="self"></link><id>/</id><updated>2020-03-19T13:50:00+01:00</updated><entry><title>Platerecognizer SDK with Kerberos.io and Portainer on a Raspberry PI</title><link href="/portainer-kerberos-io-platerecognizer.html" rel="alternate"></link><published>2020-03-19T13:46:00+01:00</published><updated>2020-03-19T13:50:00+01:00</updated><author><name>wossname?</name></author><id>tag:None,2020-03-19:/portainer-kerberos-io-platerecognizer.html</id><summary type="html">&lt;p&gt;Installing the Platerecognizer API on a Raspberry PI, feeding it with pictures/video from Kerberos.io container on the same PI&lt;/p&gt;</summary><content type="html">&lt;p&gt;Install Docker &amp;amp; Portainer:
+https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/
+(Pi-Hole is also handy, but not for this project)
+For good instructions on installing Portainer, follow the above tutorial.
+Here's a summary:&lt;/p&gt;
+&lt;p&gt;On the Raspberry Pi command line:
+*   Install Docker on the 
+    *   curl -sSL https://get.docker.com | sh
+    *    sudo usermod -aG docker pi
+    *   Log out &amp;amp; in again
+    *   If the usermod doesn’t “take”, you need to add “sudo” before all the commands below
+*   Install Portainer:
+    *   docker volume create portainer_data
+    *   docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart always portainer/portainer
+    *   Check that Portainer is running:
+    *   docker ps
+    *   Check that you can connect: 
+    *   Point your web browser to the PI ip adress, port 9000
+*   You will need to create an admin user. 
+    The GUI doesn't really give the impression that you can change the username, but you can. 
+    I used the  username "pi" so there's one less to remember
+*   After login, select "Local" and click "Connect"&lt;/p&gt;
+&lt;p&gt;Portainer is now good to go, and you can install Platerecognizer SDK.
+Register at Platerecognizer to get a token and SDK API Key (They provide trial SDK keys on request)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Platerecognizer using Portainer GUI:&lt;ul&gt;
+&lt;li&gt;Create a volume:&lt;/li&gt;
+&lt;li&gt;license&lt;/li&gt;
+&lt;li&gt;Create container:&lt;/li&gt;
+&lt;li&gt;Image: platerecognizer/alpr-raspberry-pi&lt;/li&gt;
+&lt;li&gt;Manual network port publishing:&lt;/li&gt;
+&lt;li&gt;Manual network port publishing:&lt;/li&gt;
+&lt;li&gt;8080 -&amp;gt; container 8080&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add volume: &lt;ul&gt;
+&lt;li&gt;Container: /license&lt;/li&gt;
+&lt;li&gt;-&amp;gt; volume: license-local&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add environment variables:
+    TOKEN=UAUAVzugJEq6I3kKAvhswOcWqg7mhxGNtjsZrYd2 (replace with your token)
+    LICENSE_KEY=XdVhbZI3I (Replace with your license)&lt;/li&gt;
+&lt;li&gt;Restart policy: Restart unless stopped&lt;ul&gt;
+&lt;li&gt;Check that Platerecognizer is working:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;http://localhost:8080/info/&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check that ANPR is working using the Raspberry PI command line:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;curl -o /tmp/car.jpg https://app.platerecognizer.com/static/demo.jpg&lt;/li&gt;
+&lt;li&gt;curl -F 'file=@/tmp/car.jpg' http://localhost:8080/alpr&lt;/li&gt;
+&lt;li&gt;You should get some JSON output:&lt;/li&gt;
+&lt;li&gt;{"processing_time": 1571.571, "camera_id": null, "filename": "car.jpg", "usage": {"max_calls": 5000, "calls": 4503}, "results": [{"vehicle": {"type": "Car", "box": {"ymin": 116, "xmax": 923, "ymax": 659, "xmin": 90}, "score": 0.811}, "box": {"ymin": 483, "xmax": 281, "ymax": 581, "xmin": 150}, "region": {"code": "gb", "score": 0.979}, "candidates": [{"score": 0.895, "plate": "nhk552"}], "dscore": 0.83, "score": 0.895, "plate": "nhk552"}], "timestamp": "2020-03-15 12:29:21.591831"}&lt;/li&gt;
+&lt;li&gt;Want to have it human-readable? jq is your friend:&lt;/li&gt;
+&lt;li&gt;sudo apt install jq&lt;/li&gt;
+&lt;li&gt;anpr=$(curl -s -F 'file=@/tmp/car.jpg' http://localhost:8080/alpr)&lt;/li&gt;
+&lt;li&gt;echo $anpr | jq .results[]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install Kerberos.IO (more info here: http://doc.kerberos.io/opensource/installation)    &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a volume, for easy local access to images and videos created by Kerberos.io&lt;/li&gt;
+&lt;li&gt;Example name: kerberos&lt;/li&gt;
+&lt;li&gt;Create container:&lt;/li&gt;
+&lt;li&gt;A sensible name. if your IP-camera has a name on the network, use that.
+...or a sensible unique identifier, example: "kerberosio-45" since my cameras IP address ends in .45&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Image: kerberos/kerberos&lt;/li&gt;
+&lt;li&gt;Volumes:&lt;ul&gt;
+&lt;li&gt;Container: /etc/opt/kerberosio/capture -&amp;gt;volume kerberos - local&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manual network port publishing:&lt;ul&gt;
+&lt;li&gt;89 -&amp;gt; 80&lt;/li&gt;
+&lt;li&gt;8889 -&amp;gt; 8889&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Restart policy: Unless stopped&lt;/li&gt;
+&lt;li&gt;Point your web-browser to the Raspberry PI ip, port 89&lt;/li&gt;
+&lt;li&gt;First select language, then create user/password&lt;/li&gt;
+&lt;li&gt;Click "Configuration" and give the container a name&lt;/li&gt;
+&lt;li&gt;Select "IP Camera" and input the stream URL. 
+    It can be challenging to find.
+    This tool worked well for me: https://sourceforge.net/projects/onvifdm/
+    For my Chinese HIKVISION knockoff it is:&lt;ul&gt;
+&lt;li&gt;rtsp://172.16.172.39:554/11&lt;/li&gt;
+&lt;li&gt;You want to use the RPI camera? Then you'll need to either setup fast mpjpeg-streamer or suchlike in the host OS, or install a container that provides an IP stream from the RPICam&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Select a suitable resolution, delay and framerate
+    Note: Kerberos.io seems to REALLY like that you use the same resolution and framerate that the camera sends)&lt;/li&gt;
+&lt;li&gt;Click Confirm &amp;amp; Select, and then Update
+    Note: The Kerberos.io GUI is kinda weird: &lt;ul&gt;
+&lt;li&gt;you navigate with the small arrows in the popup window&lt;/li&gt;
+&lt;li&gt;you MUST click "Update" for changes to be saved&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Go to the Dashboard and check if stream is working.
+    Be advised; it may take a LONG time before the stream shows up. Minutes, easily.&lt;/li&gt;
+&lt;li&gt;Now you need to "tune" Kerberos.io to give you correct trigger. Play with detection zone, delay, fps etc.&lt;/li&gt;
+&lt;li&gt;Once you are happy with captured images, it is time to run them through Platerecognizer&lt;ul&gt;
+&lt;li&gt;Where are the images, you ask? /var/lib/docker/volumes/&lt;whateveryounamedit&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open a (root) shell, either from Portainer or from the PI command line&lt;/li&gt;
+&lt;li&gt;Edit the run.sh script (or input another name in the Motion config in Kerberos.io)&lt;ul&gt;
+&lt;li&gt;apt install nano&lt;/li&gt;
+&lt;li&gt;nano /etc/opt/kerberosio/scripts/run.sh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Simple example:&lt;/h2&gt;
+&lt;h1&gt;!/bin/bash&lt;/h1&gt;
+&lt;p&gt;start=$(date +%s%3N)
+filnavn=$(echo $1 | jq -r '.pathToImage')
+alpr=$(curl -s -F 'file=@/etc/opt/kerberosio/capture/'$filnavn'' http://192.168.172.51:8080/alpr)
+stopp=$(date +%s%3N)&lt;/p&gt;
+&lt;p&gt;echo "---" &amp;gt;&amp;gt;/tmp/motion.log
+echo $(date -d @$((start/1000)) +"%Y%m%d %H:%M:%S") $filnavn &amp;gt;&amp;gt;/tmp/motion.log
+echo "ANPR-prosessering ms: " $(($stopp-$start)) &amp;gt;&amp;gt;/tmp/motion.log
+echo $alpr &amp;gt;&amp;gt;/tmp/motion.log&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Now you have ANPR results in /tmp/motion.log. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Run.sh would be the fastest way to get something done on ANPR results; 
+for instance: opening a gate for a known license plate&lt;/p&gt;
+&lt;p&gt;For general use however, a script monitoring the volume (locally on PI: /var/lib/docker/volumes/kerberos/_data ) using inotify or suchlike would be better. &lt;/p&gt;
+&lt;p&gt;One could also consider using a AI system/Machine Learning to determine if a vehicle is in the image before running it through ANPR, to save on the number of calls to the Platerecognizer SDK&lt;/p&gt;
+&lt;p&gt;Note: The ANPR results include "area of interest", which can be used for many interesting things, including determining the vehicle direction of travel, if you set up motion on Kerberos.io to capture several pictures of the moving car.&lt;/p&gt;
+&lt;p&gt;Kerberos can capture video also, but Platerecognizer uses on API call per frame, so it's really not a good idea to use Platerecognizer on video until they find a better solution for this (…unless you have an SDK with unlimited calls)&lt;/p&gt;</content><category term="rpi"></category><category term="docker"></category><category term="rpi"></category></entry><entry><title>Pelican to Github pages</title><link href="/pelican-github-pages.html" rel="alternate"></link><published>2020-03-15T10:54:00+01:00</published><updated>2020-03-15T11:30:00+01:00</updated><author><name>wossname?</name></author><id>tag:None,2020-03-15:/pelican-github-pages.html</id><summary type="html">&lt;p&gt;Using the Pelican publishing system to create blog on github pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Following the instructions 
 &lt;a href="https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html" title="Renata's blog"&gt;on Renata's blog&lt;/a&gt;
 I now have a working blog on Github Pages!&lt;/p&gt;
 &lt;p&gt;The only addition was to create a python3 virtual environment, which was simple enough:&lt;/p&gt;
