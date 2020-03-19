@@ -83,13 +83,14 @@ Register at Platerecognizer to get a token and SDK API Key (They provide trial S
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Restart policy: Unless stopped&lt;/li&gt;
+&lt;li&gt;No login to the Kerberos-IO web GUI:&lt;ul&gt;
 &lt;li&gt;Point your web-browser to the Raspberry PI ip, port 89&lt;/li&gt;
 &lt;li&gt;First select language, then create user/password&lt;/li&gt;
 &lt;li&gt;Click "Configuration" and give the container a name&lt;/li&gt;
 &lt;li&gt;Select "IP Camera" and input the stream URL. 
-    It can be challenging to find.
-    This tool worked well for me: https://sourceforge.net/projects/onvifdm/
-    For my Chinese HIKVISION knockoff it is:&lt;ul&gt;
+It can be challenging to find.
+This tool worked well for me: https://sourceforge.net/projects/onvifdm/
+For my Chinese HIKVISION knockoff it is:&lt;/li&gt;
 &lt;li&gt;rtsp://172.16.172.39:554/11&lt;/li&gt;
 &lt;li&gt;You want to use the RPI camera? Then you'll need to either setup fast mpjpeg-streamer or suchlike in the host OS, or install a container that provides an IP stream from the RPICam&lt;/li&gt;
 &lt;/ul&gt;
