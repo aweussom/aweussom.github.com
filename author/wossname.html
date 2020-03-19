@@ -101,15 +101,12 @@ Register at Platerecognizer to get a token and SDK API Key (They provide trial S
 </li>
 </ul>
 <p>Install Kerberos.IO (more info here: http://doc.kerberos.io/opensource/installation)  </p>
-<div class="highlight"><pre><span></span><code><span class="err">*   Create a volume, for easy local access to images and videos created by Kerberos.io</span>
-<span class="err">*   Example name: kerberos</span>
-<span class="err">*   Create container:</span>
-<span class="err">*   A sensible name. if your IP-camera has a name on the network, use that.</span>
-<span class="err">...or a sensible unique identifier, example: &quot;kerberosio-45&quot; since my cameras IP address ends in .45</span>
-</code></pre></div>
-
-
 <ul>
+<li>Create a volume, for easy local access to images and videos created by Kerberos.io</li>
+<li>Example name: kerberos</li>
+<li>Create container:</li>
+<li>A sensible name. if your IP-camera has a name on the network, use that.<br>
+    ...or a sensible unique identifier, example: "kerberosio-45" since my cameras IP address ends in .45</li>
 <li>Image: kerberos/kerberos</li>
 <li>Volumes:<ul>
 <li>Container: /etc/opt/kerberosio/capture -&gt;volume kerberos - local</li>
