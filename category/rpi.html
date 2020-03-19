@@ -34,30 +34,36 @@
         </address>
 <p>In <a href="/category/rpi.html">rpi</a>.</p>
 <p>tags: <a href="/tag/docker.html">docker</a> <a href="/tag/rpi.html">rpi</a> </p>
-</footer><!-- /.post-info --><p>Install Docker &amp; Portainer:
-<a href="https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/" title="HowTo">HowTo</a></p>
-<p>(Pi-Hole is also handy, but not for this project)</p>
-<p>For good instructions on installing Portainer, follow the above tutorial.</p>
-<p>Here's a summary:</p>
-<p>On the Raspberry Pi command line:
-*   Install Docker on the 
-    *   curl -sSL https://get.docker.com | sh
-    *    sudo usermod -aG docker pi
-    *   Log out &amp; in again
-    *   If the usermod doesn’t “take”, you need to add “sudo” before all the commands below
-*   Install Portainer:
-    *   docker volume create portainer_data
-    *   docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart always portainer/portainer
-    *   Check that Portainer is running:
-    *   docker ps
-    *   Check that you can connect: 
-    *   Point your web browser to the PI ip adress, port 9000
-*   You will need to create an admin user. 
+</footer><!-- /.post-info --><p>Install Docker &amp; Portainer:+
+<a href="https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/" title="HowTo">HowTo</a>  </p>
+<p>(Pi-Hole is also handy, but not for this project)\
+For good instructions on installing Portainer, follow the above tutorial.\
+Here's a summary:\ 
+On the Raspberry Pi command line:\</p>
+<ul>
+<li>Install Docker on the <ul>
+<li>curl -sSL https://get.docker.com | sh</li>
+<li>sudo usermod -aG docker pi</li>
+<li>Log out &amp; in again</li>
+<li>If the usermod doesn’t “take”, you need to add “sudo” before all the commands below</li>
+</ul>
+</li>
+<li>Install Portainer:<ul>
+<li>docker volume create portainer_data</li>
+<li>docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart always portainer/portainer</li>
+<li>Check that Portainer is running:</li>
+<li>docker ps</li>
+<li>Check that you can connect: </li>
+<li>Point your web browser to the PI ip adress, port 9000</li>
+</ul>
+</li>
+<li>You will need to create an admin user. 
     The GUI doesn't really give the impression that you can change the username, but you can. 
-    I used the  username "pi" so there's one less to remember
-*   After login, select "Local" and click "Connect"</p>
-<p>Portainer is now good to go, and you can install Platerecognizer SDK.
-Register at Platerecognizer to get a token and SDK API Key (They provide trial SDK keys on request)</p>
+    I used the  username "pi" so there's one less to remember</li>
+<li>After login, select "Local" and click "Connect"</li>
+</ul>
+<p>Portainer is now good to go, and you can install Platerecognizer SDK.\
+Register at Platerecognizer to get a token and SDK API Key (They provide trial SDK keys on request)\</p>
 <ul>
 <li>Install Platerecognizer using Portainer GUI:<ul>
 <li>Create a volume:</li>
@@ -151,22 +157,22 @@ Register at Platerecognizer to get a token and SDK API Key (They provide trial S
 </ul>
 <h2>Simple example:</h2>
 <h1>!/bin/bash</h1>
-<p>start=$(date +%s%3N)
-filnavn=$(echo $1 | jq -r '.pathToImage')
-alpr=$(curl -s -F 'file=@/etc/opt/kerberosio/capture/'$filnavn'' http://192.168.172.51:8080/alpr)
-stopp=$(date +%s%3N)</p>
-<p>echo "---" &gt;&gt;/tmp/motion.log
-echo $(date -d @$((start/1000)) +"%Y%m%d %H:%M:%S") $filnavn &gt;&gt;/tmp/motion.log
-echo "ANPR-prosessering ms: " $(($stopp-$start)) &gt;&gt;/tmp/motion.log
-echo $alpr &gt;&gt;/tmp/motion.log</p>
+<p>start=$(date +%s%3N)<br>
+filnavn=$(echo $1 | jq -r '.pathToImage')<br>
+alpr=$(curl -s -F 'file=@/etc/opt/kerberosio/capture/'$filnavn'' http://192.168.172.51:8080/alpr)<br>
+stopp=$(date +%s%3N)  </p>
+<p>echo "---" &gt;&gt;/tmp/motion.log<br>
+echo $(date -d @$((start/1000)) +"%Y%m%d %H:%M:%S") $filnavn &gt;&gt;/tmp/motion.log<br>
+echo "ANPR-prosessering ms: " $(($stopp-$start)) &gt;&gt;/tmp/motion.log<br>
+echo $alpr &gt;&gt;/tmp/motion.log  </p>
 <ul>
-<li>Now you have ANPR results in /tmp/motion.log. </li>
+<li>Now you have ANPR results in /tmp/motion.log.  </li>
 </ul>
-<p>Run.sh would be the fastest way to get something done on ANPR results; 
-for instance: opening a gate for a known license plate</p>
-<p>For general use however, a script monitoring the volume (locally on PI: /var/lib/docker/volumes/kerberos/_data ) using inotify or suchlike would be better. </p>
-<p>One could also consider using a AI system/Machine Learning to determine if a vehicle is in the image before running it through ANPR, to save on the number of calls to the Platerecognizer SDK</p>
-<p>Note: The ANPR results include "area of interest", which can be used for many interesting things, including determining the vehicle direction of travel, if you set up motion on Kerberos.io to capture several pictures of the moving car.</p>
+<p>Run.sh would be the fastest way to get something done on ANPR results;<br>
+for instance: opening a gate for a known license plate  </p>
+<p>For general use however, a script monitoring the volume (locally on PI: /var/lib/docker/volumes/kerberos/_data ) using inotify or suchlike would be better.  </p>
+<p>One could also consider using a AI system/Machine Learning to determine if a vehicle is in the image before running it through ANPR, to save on the number of calls to the Platerecognizer SDK  </p>
+<p>Note: The ANPR results include "area of interest", which can be used for many interesting things, including determining the vehicle direction of travel, if you set up motion on Kerberos.io to capture several pictures of the moving car.  </p>
 <p>Kerberos can capture video also, but Platerecognizer uses on API call per frame, so it's really not a good idea to use Platerecognizer on video until they find a better solution for this (…unless you have an SDK with unlimited calls)</p>                </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">

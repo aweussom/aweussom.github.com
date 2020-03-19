@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>wossname?</title><link>/</link><description></description><lastBuildDate>Thu, 19 Mar 2020 13:50:00 +0100</lastBuildDate><item><title>Platerecognizer SDK with Kerberos.io and Portainer on a Raspberry PI</title><link>/portainer-kerberos-io-platerecognizer.html</link><description>&lt;p&gt;Install Docker &amp;amp; Portainer:
-&lt;a href="https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/" title="HowTo"&gt;HowTo&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;(Pi-Hole is also handy, but not for this project)&lt;/p&gt;
-&lt;p&gt;For good instructions on installing Portainer, follow the above tutorial.&lt;/p&gt;
-&lt;p&gt;Here's a summary:&lt;/p&gt;
-&lt;p&gt;On the Raspberry Pi command line:
-*   Install Docker on the 
-    *   curl -sSL https://get.docker.com | sh
-    *    sudo usermod -aG docker pi
-    *   Log out &amp;amp; in again
-    *   If the usermod doesn’t “take”, you need to add “sudo” before all the commands below
-*   Install Portainer:
-    *   docker volume create portainer_data
-    *   docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart always portainer/portainer
-    *   Check that Portainer is running:
-    *   docker ps
-    *   Check that you can connect: 
-    *   Point your web browser to the PI ip adress, port 9000
-*   You will need to create an admin user. 
+<rss version="2.0"><channel><title>wossname?</title><link>/</link><description></description><lastBuildDate>Thu, 19 Mar 2020 13:50:00 +0100</lastBuildDate><item><title>Platerecognizer SDK with Kerberos.io and Portainer on a Raspberry PI</title><link>/portainer-kerberos-io-platerecognizer.html</link><description>&lt;p&gt;Install Docker &amp;amp; Portainer:+
+&lt;a href="https://homenetworkguy.com/how-to/install-pihole-on-raspberry-pi-with-docker-and-portainer/" title="HowTo"&gt;HowTo&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;(Pi-Hole is also handy, but not for this project)\
+For good instructions on installing Portainer, follow the above tutorial.\
+Here's a summary:\ 
+On the Raspberry Pi command line:\&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Docker on the &lt;ul&gt;
+&lt;li&gt;curl -sSL https://get.docker.com | sh&lt;/li&gt;
+&lt;li&gt;sudo usermod -aG docker pi&lt;/li&gt;
+&lt;li&gt;Log out &amp;amp; in again&lt;/li&gt;
+&lt;li&gt;If the usermod doesn’t “take”, you need to add “sudo” before all the commands below&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Install Portainer:&lt;ul&gt;
+&lt;li&gt;docker volume create portainer_data&lt;/li&gt;
+&lt;li&gt;docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart always portainer/portainer&lt;/li&gt;
+&lt;li&gt;Check that Portainer is running:&lt;/li&gt;
+&lt;li&gt;docker ps&lt;/li&gt;
+&lt;li&gt;Check that you can connect: &lt;/li&gt;
+&lt;li&gt;Point your web browser to the PI ip adress, port 9000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;You will need to create an admin user. 
     The GUI doesn't really give the impression that you can change the username, but you can. 
-    I used the  username "pi" so there's one less to remember
-*   After login, select "Local" and click "Connect"&lt;/p&gt;
-&lt;p&gt;Portainer is now good to go, and you can install Platerecognizer SDK.
-Register at Platerecognizer to get a token and SDK API Key (They provide trial SDK keys on request)&lt;/p&gt;
+    I used the  username "pi" so there's one less to remember&lt;/li&gt;
+&lt;li&gt;After login, select "Local" and click "Connect"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Portainer is now good to go, and you can install Platerecognizer SDK.\
+Register at Platerecognizer to get a token and SDK API Key (They provide trial SDK keys on request)\&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Install Platerecognizer using Portainer GUI:&lt;ul&gt;
 &lt;li&gt;Create a volume:&lt;/li&gt;
@@ -116,22 +122,22 @@ Register at Platerecognizer to get a token and SDK API Key (They provide trial S
 &lt;/ul&gt;
 &lt;h2&gt;Simple example:&lt;/h2&gt;
 &lt;h1&gt;!/bin/bash&lt;/h1&gt;
-&lt;p&gt;start=$(date +%s%3N)
-filnavn=$(echo $1 | jq -r '.pathToImage')
-alpr=$(curl -s -F 'file=@/etc/opt/kerberosio/capture/'$filnavn'' http://192.168.172.51:8080/alpr)
-stopp=$(date +%s%3N)&lt;/p&gt;
-&lt;p&gt;echo "---" &amp;gt;&amp;gt;/tmp/motion.log
-echo $(date -d @$((start/1000)) +"%Y%m%d %H:%M:%S") $filnavn &amp;gt;&amp;gt;/tmp/motion.log
-echo "ANPR-prosessering ms: " $(($stopp-$start)) &amp;gt;&amp;gt;/tmp/motion.log
-echo $alpr &amp;gt;&amp;gt;/tmp/motion.log&lt;/p&gt;
+&lt;p&gt;start=$(date +%s%3N)&lt;br&gt;
+filnavn=$(echo $1 | jq -r '.pathToImage')&lt;br&gt;
+alpr=$(curl -s -F 'file=@/etc/opt/kerberosio/capture/'$filnavn'' http://192.168.172.51:8080/alpr)&lt;br&gt;
+stopp=$(date +%s%3N)  &lt;/p&gt;
+&lt;p&gt;echo "---" &amp;gt;&amp;gt;/tmp/motion.log&lt;br&gt;
+echo $(date -d @$((start/1000)) +"%Y%m%d %H:%M:%S") $filnavn &amp;gt;&amp;gt;/tmp/motion.log&lt;br&gt;
+echo "ANPR-prosessering ms: " $(($stopp-$start)) &amp;gt;&amp;gt;/tmp/motion.log&lt;br&gt;
+echo $alpr &amp;gt;&amp;gt;/tmp/motion.log  &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Now you have ANPR results in /tmp/motion.log. &lt;/li&gt;
+&lt;li&gt;Now you have ANPR results in /tmp/motion.log.  &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Run.sh would be the fastest way to get something done on ANPR results; 
-for instance: opening a gate for a known license plate&lt;/p&gt;
-&lt;p&gt;For general use however, a script monitoring the volume (locally on PI: /var/lib/docker/volumes/kerberos/_data ) using inotify or suchlike would be better. &lt;/p&gt;
-&lt;p&gt;One could also consider using a AI system/Machine Learning to determine if a vehicle is in the image before running it through ANPR, to save on the number of calls to the Platerecognizer SDK&lt;/p&gt;
-&lt;p&gt;Note: The ANPR results include "area of interest", which can be used for many interesting things, including determining the vehicle direction of travel, if you set up motion on Kerberos.io to capture several pictures of the moving car.&lt;/p&gt;
+&lt;p&gt;Run.sh would be the fastest way to get something done on ANPR results;&lt;br&gt;
+for instance: opening a gate for a known license plate  &lt;/p&gt;
+&lt;p&gt;For general use however, a script monitoring the volume (locally on PI: /var/lib/docker/volumes/kerberos/_data ) using inotify or suchlike would be better.  &lt;/p&gt;
+&lt;p&gt;One could also consider using a AI system/Machine Learning to determine if a vehicle is in the image before running it through ANPR, to save on the number of calls to the Platerecognizer SDK  &lt;/p&gt;
+&lt;p&gt;Note: The ANPR results include "area of interest", which can be used for many interesting things, including determining the vehicle direction of travel, if you set up motion on Kerberos.io to capture several pictures of the moving car.  &lt;/p&gt;
 &lt;p&gt;Kerberos can capture video also, but Platerecognizer uses on API call per frame, so it's really not a good idea to use Platerecognizer on video until they find a better solution for this (…unless you have an SDK with unlimited calls)&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">wossname?</dc:creator><pubDate>Thu, 19 Mar 2020 13:46:00 +0100</pubDate><guid isPermaLink="false">tag:None,2020-03-19:/portainer-kerberos-io-platerecognizer.html</guid><category>rpi</category><category>docker</category><category>rpi</category></item><item><title>Pelican to Github pages</title><link>/pelican-github-pages.html</link><description>&lt;p&gt;Following the instructions 
 &lt;a href="https://rsip22.github.io/blog/create-a-blog-with-pelican-and-github-pages.html" title="Renata's blog"&gt;on Renata's blog&lt;/a&gt;
 I now have a working blog on Github Pages!&lt;/p&gt;
