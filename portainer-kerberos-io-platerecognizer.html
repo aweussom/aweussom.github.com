@@ -59,12 +59,12 @@ On the Raspberry Pi command line:  </p>
 <li>Check that Portainer is running:</li>
 <li>docker ps</li>
 <li>Check that you can connect: </li>
-<li>Point your web browser to the PI ip adress, port 9000</li>
+<li>Point your web browser to the PI ip adress, port 9000
+You will need to create an admin user. 
+The GUI doesn't really give the impression that you can change the username, but you can. 
+I used the  username "pi" so there's one less to remember  </li>
 </ul>
 </li>
-<li>You will need to create an admin user. 
-    The GUI doesn't really give the impression that you can change the username, but you can. 
-    I used the  username "pi" so there's one less to remember</li>
 <li>After login, select "Local" and click "Connect"</li>
 </ul>
 <p>Portainer is now good to go, and you can install Platerecognizer SDK.\
@@ -76,7 +76,7 @@ Register at Platerecognizer to get a token and SDK API Key (They provide trial S
 <li>Create container:</li>
 <li>Image: platerecognizer/alpr-raspberry-pi</li>
 <li>Manual network port publishing:</li>
-<li>Manual network port publishing:</li>
+<li>89 -&gt; container 80</li>
 <li>8080 -&gt; container 8080</li>
 </ul>
 </li>
@@ -93,9 +93,7 @@ Register at Platerecognizer to get a token and SDK API Key (They provide trial S
 </ul>
 </li>
 <li>http://localhost:8080/info/</li>
-<li>
-<p>Check that ANPR is working using the Raspberry PI command line:</p>
-<ul>
+<li>Check that ANPR is working using the Raspberry PI command line:<ul>
 <li>curl -o /tmp/car.jpg https://app.platerecognizer.com/static/demo.jpg</li>
 <li>curl -F 'file=@/tmp/car.jpg' http://localhost:8080/alpr</li>
 <li>You should get some JSON output:</li>
@@ -106,60 +104,44 @@ Register at Platerecognizer to get a token and SDK API Key (They provide trial S
 <li>echo $anpr | jq .results[]</li>
 </ul>
 </li>
-<li>
-<p>Install Kerberos.IO (more info here: http://doc.kerberos.io/opensource/installation)    </p>
-<ul>
-<li>Create a volume, for easy local access to images and videos created by Kerberos.io</li>
-<li>Example name: kerberos</li>
-<li>Create container:</li>
-<li>A sensible name. if your IP-camera has a name on the network, use that.
-...or a sensible unique identifier, example: "kerberosio-45" since my cameras IP address ends in .45</li>
 </ul>
-</li>
-<li>Image: kerberos/kerberos</li>
-<li>Volumes:<ul>
-<li>Container: /etc/opt/kerberosio/capture -&gt;volume kerberos - local</li>
-</ul>
-</li>
-<li>Manual network port publishing:<ul>
-<li>89 -&gt; 80</li>
-<li>8889 -&gt; 8889</li>
-</ul>
-</li>
-<li>Restart policy: Unless stopped</li>
-<li>Point your web-browser to the Raspberry PI ip, port 89</li>
-<li>First select language, then create user/password</li>
-<li>Click "Configuration" and give the container a name</li>
-<li>Select "IP Camera" and input the stream URL. 
+<p>Install Kerberos.IO (more info here: http://doc.kerberos.io/opensource/installation)<br>
+    *   Create a volume, for easy local access to images and videos created by Kerberos.io
+    *   Example name: kerberos
+    *   Create container:
+    *   A sensible name. if your IP-camera has a name on the network, use that.
+    ...or a sensible unique identifier, example: "kerberosio-45" since my cameras IP address ends in .45
+*   Image: kerberos/kerberos
+*   Volumes:
+    *   Container: /etc/opt/kerberosio/capture -&gt;volume kerberos - local
+*   Manual network port publishing:
+    *   89 -&gt; 80
+    *       8889 -&gt; 8889
+*   Restart policy: Unless stopped
+*   Point your web-browser to the Raspberry PI ip, port 89
+*   First select language, then create user/password
+*   Click "Configuration" and give the container a name
+*   Select "IP Camera" and input the stream URL. 
     It can be challenging to find.
     This tool worked well for me: https://sourceforge.net/projects/onvifdm/
-    For my Chinese HIKVISION knockoff it is:<ul>
-<li>rtsp://172.16.172.39:554/11</li>
-<li>You want to use the RPI camera? Then you'll need to either setup fast mpjpeg-streamer or suchlike in the host OS, or install a container that provides an IP stream from the RPICam</li>
-</ul>
-</li>
-<li>Select a suitable resolution, delay and framerate
-    Note: Kerberos.io seems to REALLY like that you use the same resolution and framerate that the camera sends)</li>
-<li>Click Confirm &amp; Select, and then Update
-    Note: The Kerberos.io GUI is kinda weird: <ul>
-<li>you navigate with the small arrows in the popup window</li>
-<li>you MUST click "Update" for changes to be saved</li>
-</ul>
-</li>
-<li>Go to the Dashboard and check if stream is working.
-    Be advised; it may take a LONG time before the stream shows up. Minutes, easily.</li>
-<li>Now you need to "tune" Kerberos.io to give you correct trigger. Play with detection zone, delay, fps etc.</li>
-<li>Once you are happy with captured images, it is time to run them through Platerecognizer<ul>
-<li>Where are the images, you ask? /var/lib/docker/volumes/<whateveryounamedit></li>
-</ul>
-</li>
-<li>Open a (root) shell, either from Portainer or from the PI command line</li>
-<li>Edit the run.sh script (or input another name in the Motion config in Kerberos.io)<ul>
-<li>apt install nano</li>
-<li>nano /etc/opt/kerberosio/scripts/run.sh</li>
-</ul>
-</li>
-</ul>
+    For my Chinese HIKVISION knockoff it is:
+    *   rtsp://172.16.172.39:554/11
+    *   You want to use the RPI camera? Then you'll need to either setup fast mpjpeg-streamer or suchlike in the host OS, or install a container that provides an IP stream from the RPICam
+*   Select a suitable resolution, delay and framerate
+    Note: Kerberos.io seems to REALLY like that you use the same resolution and framerate that the camera sends)
+*   Click Confirm &amp; Select, and then Update
+    Note: The Kerberos.io GUI is kinda weird: 
+    *   you navigate with the small arrows in the popup window
+    *   you MUST click "Update" for changes to be saved
+*   Go to the Dashboard and check if stream is working.
+    Be advised; it may take a LONG time before the stream shows up. Minutes, easily.
+*   Now you need to "tune" Kerberos.io to give you correct trigger. Play with detection zone, delay, fps etc.
+*   Once you are happy with captured images, it is time to run them through Platerecognizer
+    *   Where are the images, you ask? /var/lib/docker/volumes/<whateveryounamedit>
+*   Open a (root) shell, either from Portainer or from the PI command line
+*   Edit the run.sh script (or input another name in the Motion config in Kerberos.io)
+    *   apt install nano
+    *   nano /etc/opt/kerberosio/scripts/run.sh</p>
 <h2>Simple example:</h2>
 <h1>!/bin/bash</h1>
 <p>start=$(date +%s%3N)<br>
