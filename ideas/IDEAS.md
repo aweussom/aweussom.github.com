@@ -69,7 +69,8 @@
 - Frank og tau i propellen
 - Industrispionasje (vann i posen) *(allerede skrevet:
   `blog/lenangen/industrispionasje.md` i bokrepoet)*
-- Kuling — dere hadde jo ikke fisk? *(jf. `blog/lenangen/feske.md`)*
+- Kuling — dere hadde jo ikke fisk? *(allerede skrevet, ferdig historie:
+  `blog/lenangen/feske.md` — Keep-linja er sluttpoenget)*
 - Æ har aildri vært redd på havet. Bortsett fra en gang…
 - Har du blitt en sånn søring, Tommy? Nei, Farfar, æ jobbe i London no.
   I England! England ja. Ja, han Shetland-Larsen for dit òg av og tel.
