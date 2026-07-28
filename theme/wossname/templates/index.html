@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block description %}<meta name="description" content="Tech blog by Tommy Leonhardsen — Linux, LLMs, and whatever else needed building this month.">{% endblock %}
+{% block content %}
+  <section class="postlist">
+    {% for article in articles_page.object_list %}
+    <article class="entry">
+      <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+      {% if article.summary %}<p class="summary">{{ article.summary|striptags|truncate(180) }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </section>
+{% endblock %}

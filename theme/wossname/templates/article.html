@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }} · {{ SITENAME }}{% endblock %}
+{% block description %}{% if article.summary %}<meta name="description" content="{{ article.summary|striptags|truncate(160) }}">{% endif %}{% endblock %}
+{% block content %}
+  <article class="post">
+    <header>
+      <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      <h1>{{ article.title }}</h1>
+      {% if article.tags %}
+      <p class="tags">{% for tag in article.tags %}<span>#{{ tag }}</span> {% endfor %}</p>
+      {% endif %}
+    </header>
+    {{ article.content }}
+    {% if article.original %}
+    <p class="mirror-note">Also published <a href="{{ article.original }}">on dev.to</a>.</p>
+    {% endif %}
+  </article>
+{% endblock %}
