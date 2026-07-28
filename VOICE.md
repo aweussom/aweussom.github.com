@@ -3,6 +3,37 @@
 Distilled from the nine 2026 posts in `content/`. When drafting or editing
 a post for this blog, sound like this — not like a tech blogger.
 
+## Arriving from another repo? Mechanics first
+
+The usual pattern: Tommy finishes work in some project repo and asks for
+"a new blog entry" pointing you here. The blog repo is
+`C:\devel\aweussom\blog\aweussom.github.com` and publishing works like this:
+
+1. Source material is the repo you were invoked in — its README, commits,
+   and code. Read a few existing posts in `content/` for calibration.
+2. Draft `content/YYYY-MM-DD-<slug>.md` (today's date) in the blog repo:
+
+   ```markdown
+   Title: ...
+   Date: YYYY-MM-DD HH:MM
+   Slug: <slug>
+   Tags: comma, separated
+   Summary: One-line teaser.
+
+   Body in Markdown.
+   ```
+
+   Images go in `content/images/<slug>/`, referenced as
+   `![alt]({static}/images/<slug>/file.png)`.
+3. **Show Tommy the draft before pushing.** A push to `main` is
+   publication: GitHub Actions deploys to https://aweussom.github.io/
+   AND dev.to auto-drafts it via RSS.
+4. On approval: commit + push `main` in the blog repo, confirm the
+   Actions run is green, give him the live URL and remind him the dev.to
+   draft is waiting in his dashboard to be published there.
+
+Full estate details are in `README.md` next to this file.
+
 ## Who is speaking
 
 A **Systems Specialist / sysadmin, not a programmer** — he says so in
