@@ -87,6 +87,11 @@
 
 ### Book / story ideas
 
+- Epigraf-kandidat til memoar-boka (Tommy, ordrett): «Min kone tror av
+  og til at jeg bløffer, og sjekker med et annet familiemedlem for å få
+  'sannheten'. …og min versjon er. Kanskje. En liten tanke morsommere.
+  Men sann.»
+
 - Bok: FogWorld — se skjønnheten i skodda
 - Glimt av sollys i metall — ny farve: krasjet UFO heler skader på hunden
 - Bok/novelle-ide: Ungdommer finner skatt etter Olav den Hellige
