@@ -95,8 +95,12 @@
   komikken kommer av at verden må reagere på en mann som har sluttet å
   forhandle med den. Barnebarnet i Sorjonen-rollen (vitne/bokholder).
   Kandidat-kapitler fra idélista: Lenangen–Trondheim på en tank, Bæffar
-  og Lensmannen, Dirigenten. Separat fra memoar-boka — dette er
-  fiksjonslisensen skrudd fra «sant» til «skrøne».
+  og Lensmannen, Dirigenten. Separat fra memoar-boka — men NB (Tommys
+  presisering): det finnes ingen «funnier» versjon, det sanne ER det
+  morsomme. Lisensen er komposisjon, ikke overdrivelse: sanne hendelser
+  omorganisert til én reise med én klokke. Persongalleriet er
+  Irving-aktig, men ekte — Oluf-bøkene var morsomme fordi de KJENTE
+  hver eneste av de gærningene.
 
 ### Writing-tool links (reference)
 
