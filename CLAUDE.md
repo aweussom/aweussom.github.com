@@ -4,6 +4,9 @@ Read `README.md` first — it is the full publishing playbook for this
 blog and the rest of the Wossname estate (landing page, book repos,
 dev.to mirroring, KDP excerpt limits).
 
+When writing or editing post content, follow `VOICE.md` — it defines
+Tommy's registers, structure, humor mechanics, and hard anti-patterns.
+
 Quick facts:
 
 - Publishing = Markdown file in `content/` + push to `main`; GitHub
