@@ -90,6 +90,13 @@
 - Bok: FogWorld — se skjønnheten i skodda
 - Glimt av sollys i metall — ny farve: krasjet UFO heler skader på hunden
 - Bok/novelle-ide: Ungdommer finner skatt etter Olav den Hellige
+- **Bæffar som Rytkönen** (jf. Paasilinnas «Den senile landmåleren») —
+  egen picaresk roman der Bæffar-figuren får Rytkönens sovereignty:
+  komikken kommer av at verden må reagere på en mann som har sluttet å
+  forhandle med den. Barnebarnet i Sorjonen-rollen (vitne/bokholder).
+  Kandidat-kapitler fra idélista: Lenangen–Trondheim på en tank, Bæffar
+  og Lensmannen, Dirigenten. Separat fra memoar-boka — dette er
+  fiksjonslisensen skrudd fra «sant» til «skrøne».
 
 ### Writing-tool links (reference)
 
