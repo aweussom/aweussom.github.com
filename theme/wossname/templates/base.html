@@ -28,7 +28,7 @@
     {% block content %}{% endblock %}
   </main>
   <footer class="site">
-    <p>© Tommy Leonhardsen · wossname ⟲ aweussom · <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">feed</a></p>
+    <p>© Tommy Leonhardsen · wossname ⟲ aweussom{% if FEED_ALL_ATOM %} · <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">feed</a>{% endif %}</p>
   </footer>
 </body>
 </html>
