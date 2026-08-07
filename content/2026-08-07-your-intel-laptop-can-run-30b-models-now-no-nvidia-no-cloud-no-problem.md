@@ -164,6 +164,23 @@ Honesty clause for the CPU column: if your machine has *no* Intel accelerators a
 
 **Next on the bench:** Google just shipped [Gemma 4, encoder-free multimodal](https://dev.to/googleai/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model-3ge5?bb=263641). I trust Google roughly as far as I can throw Brin — a couple of meters, if my tomoe-nage lands right — but Gemma 3 4B earned its place on our verified list fair and square, and early reports say Gemma 4's int4 builds hit the *same* NPU compiler bug the channel-wise recipe fixes. So they'll get tested, properly, numbers and all. The models keep being better than the corporate weather around them.
 
+**Update, six hours after publishing:** tested. Properly. Numbers and all.
+
+| Gemma 4 | Device | Steady-state |
+|---|---|---|
+| 26B-A4B int4 (multimodal MoE) | Arc 140V laptop GPU, resident | **26.6 tok/s** |
+| 26B-A4B int4 | 24-core desktop CPU | 21.0 tok/s |
+| 26B-A4B int4, `--offload-ratio 30` | Arc 140V (frees ~4 GB for context) | ~12 tok/s and climbing |
+| E4B int8 | Arc 140V GPU | 16.4 tok/s |
+| E4B int8 | Desktop CPU / non-XMX iGPU | ~13 / 12.6 tok/s |
+| E4B int8 | Any NPU we own | do not |
+
+The good news is genuinely good: a 26B multimodal MoE runs *faster on the laptop's iGPU than on a 24-core desktop CPU*, answers questions about XKCD strips while 30% of its experts live on the SSD, and Intel had pre-converted builds ready at launch. The models are excellent.
+
+The NPU verdict is a two-part tragedy we've filed under "measured so you don't have to": on the older desktop NPU, Gemma 4 generates multilingual token salad at 0.5 tok/s. On the newer laptop NPU it generates *perfectly coherent* answers — at 0.1 tok/s. Eight minutes per reply. Right answers, geological pace. Two separate bugs, both now documented with repro commands in the repo's TODONT.md, neither of them the models' fault.
+
+Brin remains unthrown. The corporate weather forecast, however, stands.
+
 ## The honest part
 
 - **Thinking models on slow devices are a UX disaster** by default: a 4B model burned three minutes reasoning about "sum 11 to 29" on the iGPU. NoLlama's web UI now defaults no-think ON, sends a firmer repetition penalty, and has a visible Stop button. If you serve slow devices, you need all three — and if you're hitting the API directly, you need to bring them yourself:
