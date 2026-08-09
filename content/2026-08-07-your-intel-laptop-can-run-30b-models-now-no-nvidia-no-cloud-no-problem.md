@@ -110,6 +110,38 @@ No flags. No configuration. No offload feature. It just works, and the reason is
 
 Æ e faen ikke helt sikker på hvordan vi havna her.
 
+**Update, two days later:** the circle closed. Dmitriy pointed out — correctly,
+with a screenshot — that his model is 80 billion parameters, and asked why the
+title says 30B. Then he ran his own 74 GB upload on his own *laptop* and posted
+the logs:
+
+| Route | RAM committed | Steady-state |
+|---|---|---|
+| Everything GPU-resident (`--offload-ratio 0`) | 74 GB | **21.3 tok/s** |
+| `--offload-ratio 30` | ~53 GB | 3.7 tok/s |
+| `--offload-ratio 60` | ~31 GB | 3.7 tok/s |
+
+An 80B coding model at 21 tokens per second, on a laptop, no NVIDIA in sight.
+Load time with offload: 16 seconds, down from 145.
+
+So why is the title still 30B? Because his laptop is not your laptop. It's a
+ThinkPad he built out to **128 GB of RAM**, with Intel's shared-GPU-memory
+override cranked to 110 GB — socketed memory, deliberately maxed. A Lunar Lake
+laptop like mine is capped at 32 GB forever; the RAM is soldered *inside the CPU
+package*. 30B is what the Intel laptop you probably own can do. 80B is what an
+Intel laptop can be *built* to do. Both sentences are true, and the second one
+has Dmitriy's name on it.
+
+His logs also broke my own sizing rule, which is why they're worth a table:
+ratio 30 and 60 decode at the *same* speed on his machine. With a model this
+much bigger than the GPU's own budget, the retained experts land in host RAM
+anyway — so the ratio decides how much RAM gets pinned, not how fast you go,
+and the *highest* ratio wins. The exact opposite of the "smallest ratio that
+fits" rule from part three, which still holds when the retained experts are
+device-resident, like on my 140V. Hardware decides which rule applies.
+Measure yours; `scripts/offload-test.py` prints the memory lines that tell
+you which world you're in.
+
 ## Where does your hardware land?
 
 Same model family, best route per hardware class, steady-state decode. Mixed quantizations and sizes — read it as routes, not a controlled A/B:
