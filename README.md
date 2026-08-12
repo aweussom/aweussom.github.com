@@ -39,6 +39,14 @@ page lives in the `wossname-books` org (aweussom is owner).
 Backdating works — `Date:` is trusted as written. Ordering, archives,
 and feeds all follow it.
 
+### Drafts and ideas (local only)
+
+`ideas/` (post backlog) and `blog_drafts/` (posts in progress) are
+gitignored on purpose: this repo is public, so anything committed here
+is world-readable before it's published. Both live only on this
+machine — don't force-add them. A draft graduates by moving into
+`content/` with proper metadata.
+
 ### Local preview (optional)
 
 ```bash

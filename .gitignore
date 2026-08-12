@@ -2,3 +2,7 @@ output/
 __pycache__/
 *.pyc
 venv/
+
+# Local-only working material — never publish
+ideas/
+blog_drafts/
