@@ -13,5 +13,7 @@ Quick facts:
   Actions deploys to https://aweussom.github.io/. Never commit `output/`.
 - `gh` is authenticated as `aweussom` (owner of the `wossname-books` org).
 - The blog is canonical; dev.to mirrors it via RSS with canonical_url.
+- Every post ends with the AI-disclosure postscript (dev.to requires it
+  for AI-assisted articles) — template in `VOICE.md`, rule in `README.md`.
 - KDP Select books (Edenrise, Coldpay): max 10% may be published free
   anywhere — never exceed it when touching excerpt pages.

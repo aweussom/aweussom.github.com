@@ -66,6 +66,38 @@ Rule: **the blog is canonical, dev.to is the mirror.** dev.to profile:
   `python scripts/import_devto.py` re-fetches everything from dev.to,
   backdates, and localizes images. Safe to re-run; it overwrites.
 
+### AI disclosure — every post, no exceptions
+
+dev.to's [guidelines for AI-assisted articles](https://dev.to/guidelines-for-ai-assisted-articles-on-dev)
+(last updated April 2024, enforced in periodic sweeps) require any article
+"generated or assisted by AI" to disclose it "either upfront using the tag
+#ABotWroteThis or at any point in the article's copy." Posts here are
+drafted by Claude from Tommy's notes and logs, so the rule applies —
+"assisted" is in the sentence and there is no lightly-assisted exemption.
+
+How we comply:
+
+- **In copy, always.** Every post ends with the disclosure postscript
+  defined in `VOICE.md` ("End with"). It reaches dev.to automatically
+  through the RSS import, spends no tag slot, and discloses on the
+  canonical blog too — where dev.to's rules don't reach but honesty does.
+- **The tag is a hedge, not the default.** dev.to caps posts at four
+  tags. While a moderation sweep is visibly running, add `abotwrotethis`
+  and drop the weakest topical tag (a skimming moderator won't read to
+  the footer); revert to four topical tags afterwards.
+- **Stay on the right side of the one rule that bites.** The guidelines
+  forbid AI-generated "educational content ... you, the human author, did
+  not already know." First-person write-ups of Tommy's own experiments,
+  with his own numbers, are precisely what they permit — that is the
+  defence if a strike ever lands, so never publish a post explaining
+  something he hasn't actually done.
+
+Backfilling the 13 posts published before this rule is a **dev.to-side
+job**: `import_devto.py` overwrites `content/*.md` from dev.to, so a
+disclosure added only to the local Markdown of a mirrored post vanishes
+on the next import. Edit the article on dev.to (which is what readers and
+moderators see), and mirror it back here with the import if convenient.
+
 ## Landing page (wossname-books.github.io)
 
 One hand-written `index.html`, no build step: edit, commit, push to

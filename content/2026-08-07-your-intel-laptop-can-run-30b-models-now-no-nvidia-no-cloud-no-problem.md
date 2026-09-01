@@ -264,3 +264,8 @@ NoLlama is MIT-licensed, one Python file, and speaks OpenAI and Ollama APIs so y
 ---
 
 *The author is a Systems Specialist who does not work in software development. This week he ran a model bigger than his computer's memory, discovered his benchmarks had been lying to him four different ways, and read GPU driver source code to find out why a documented feature did nothing. The feature was fine. The documentation had simply not mentioned which hardware it was for. He is keeping the laptop, the desktop, and the grudge.*
+
+*Disclosure: a bot wrote this. The laptop, the offload ratios, the driver
+source-reading and every number in the tables are mine, measured here; the
+sentences were drafted by an LLM from my notes and TODONT.md and edited
+until they sounded like me. The grudge is entirely human.*

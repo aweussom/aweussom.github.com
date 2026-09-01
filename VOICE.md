@@ -92,11 +92,29 @@ template headings — follow the template, keep the wit in the details.)
   This is the gift the whole post exists to deliver.
 - **"Things I learned"** as numbered maxims: *"Evaluate the landlord,
   not just the apartment."*
-- **End with**: repo link, license, honest limitations, and often an
-  italicized third-person postscript: *"The author is a Systems
-  Specialist who does not work in software development. His laptop now
-  runs LLMs on three different Intel devices simultaneously. He is not
-  sure how this happened but he is keeping it."*
+- **End with**: repo link, license, honest limitations, and the
+  italicized postscript — which is also where the AI disclosure lives
+  (mandatory; see `README.md` → AI disclosure):
+
+  ```markdown
+  ---
+
+  *Disclosure: a bot wrote this. The hardware, the experiments, the dead
+  ends and every number in it are mine; the sentences were drafted by
+  Claude Code from my notes and logs, then argued with until they sounded
+  like me. Nothing gets published here that I hadn't run myself.*
+  ```
+
+  Vary the wording per post, but keep the disclosure blunt and
+  unhedged — no "merely assisted", no special pleading, no burying it
+  mid-sentence. It is a fact about how the post was made, delivered with
+  the same directness as the benchmark numbers.
+
+  The third-person coda stays a separate beat and can follow it: *"The
+  author is a Systems Specialist who does not work in software
+  development. His laptop now runs LLMs on three different Intel devices
+  simultaneously. He is not sure how this happened but he is keeping
+  it."*
 
 ## Humor mechanics
 
@@ -156,5 +174,7 @@ template headings — follow the template, keep the wit in the details.)
 4. Did something get praised as well as roasted?
 5. Are the limitations stated plainly?
 6. Is there a repo link and license?
-7. Would Tommy's sense of proportion be questioned by a reasonable
+7. Is the AI-disclosure postscript there? (Non-negotiable — dev.to
+   requires it and the blog gets it too.)
+8. Would Tommy's sense of proportion be questioned by a reasonable
    reader? (If not, the post may be underdone.)

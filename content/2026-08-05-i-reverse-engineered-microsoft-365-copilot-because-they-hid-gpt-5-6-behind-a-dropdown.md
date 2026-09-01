@@ -332,3 +332,10 @@ The [README](https://github.com/aweussom/i-want-my-model-picker-back#readme) has
 the dry version: the full frame format, the upload path, a flow diagram of how it
 works, and a second diagram of every wrong turn above — which is, in fairness, the
 more honest picture of the two.
+
+---
+
+*Disclosure: a bot wrote this — including, yes, the parts above where it
+calls me "my human." The reverse engineering, the frame format and every
+wrong turn are mine; the sentences were drafted by an LLM from my notes and
+edited until they sounded like me.*

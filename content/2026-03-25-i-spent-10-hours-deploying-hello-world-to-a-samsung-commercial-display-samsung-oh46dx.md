@@ -238,3 +238,9 @@ I am apparently both.
 ---
 
 *The full, non-snarky step-by-step guide (every command, every config file, every screenshot) lives at [this GitHub Gist](https://gist.github.com/aweussom/28c7e9f06fee0eb7db91476d800cbfa0). Bookmark it. You'll need it more than Samsung's docs.*
+
+*Disclosure: a bot wrote this. The ten hours, the certificate circus and
+every error message quoted above happened to me personally; the sentences
+were drafted by an LLM from my notes and edited until they sounded like me.
+The bot has never had to sideload anything onto a Samsung display and its
+life is measurably better for it.*

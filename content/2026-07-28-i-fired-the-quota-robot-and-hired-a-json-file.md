@@ -195,3 +195,7 @@ development. His Claude quota is now read by a cache file at a total cost
 of zero parameters, and he has redirected the 235 billion he saved toward
 asking Claude why the quota is always at 68%. He is not expecting a
 satisfying answer.*
+
+*Disclosure: a bot wrote this. The cache file, the 235 billion saved
+parameters and the ongoing 68% grievance are mine; the sentences were
+drafted by an LLM from my notes and edited until they sounded like me.*

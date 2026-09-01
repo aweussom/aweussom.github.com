@@ -127,3 +127,11 @@ openclaw onboard --install-daemon
 Any Intel box with an ARC GPU (or a strong enough CPU) will do. NPU stays the chat/efficiency star; the agent lives on the GPU.
 
 I'm still a Systems Specialist, not a developer, and I remain genuinely unsure how I ended up running a personal AI agent on an integrated GPU. As ever, the code was the easy part. The hard part was realizing I'd been reading the same book before every sentence.
+
+---
+
+*Disclosure: a bot wrote this. The install, the device juggling and the
+pre-warm scripts are mine; the sentences were drafted by an LLM from my
+notes and edited until they sounded like me. The agent in the post and the
+drafter of the post are not the same bot, though I accept this is becoming
+hard to follow.*

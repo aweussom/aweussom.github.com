@@ -191,3 +191,8 @@ MIT license. Any Intel hardware with an NPU, ARC GPU, or just a CPU. OpenVINO 20
 *\*\* If your model isn't in the curated list, NoLlama provides a script to automate the painful process of converting any HuggingFace model to OpenVINO format — installing optimum-intel, figuring out weight formats, waiting while praying nothing crashes. It is still conversion, which means it is still fundamentally an act of faith. But at least the script handles the swearing for you. The curated list exists because pre-exported models are faster to get running, not because they're the only option.*
 
 *Developed and tested on an Intel Core Ultra 7 258V (NPU + ARC 140V iGPU, 32 GB RAM). Should work on any Intel Core Ultra with NPU, any system with an ARC discrete GPU (A770, B580, etc.), or — in a pinch — any Intel CPU.*
+
+*Disclosure: a bot wrote this. The hardware, the benchmarks and every
+number in the tables are mine, measured on my own machines; the sentences
+were drafted by an LLM from my notes and logs and edited until they sounded
+like me.*

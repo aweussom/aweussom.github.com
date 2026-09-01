@@ -70,3 +70,10 @@ Here's where it got interesting. I asked Copilot CLI to read the original chapte
 ### Overall impression
 
 The free tier Haiku 4.5 model in Copilot CLI was more than capable for this kind of structured code generation. Copilot handled the boilerplate and let me focus on what actually matters — the critique prompt and the workflow design. From first prompt to working tool: one session, no debugging required beyond correcting a model name.
+
+---
+
+*Disclosure: a bot wrote this. The tool, the prompts and the four
+screenshots are mine; the sentences were drafted by an LLM from my session
+notes and edited until they sounded like me. Fitting, for a post about
+asking a model to be unkind to my prose.*

@@ -182,3 +182,10 @@ That is a possible future, not a promise. For now, the scoreless toy is the proj
 
 
 Thank you for playing.
+
+---
+
+*Disclosure: a bot wrote this post, not just the code — see "AI-Assisted
+Development" above for how the game happened. The concept, the visual
+direction and every playtest reaction are mine; the sentences were drafted
+by an LLM from my notes and edited until they sounded like me.*

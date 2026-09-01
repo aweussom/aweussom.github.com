@@ -248,3 +248,8 @@ And, in fairness, that bittersweet Trønderrock song *does* show up now.
 Which is more than can be said for my sense of proportion.
 
 *Code: [github.com/aweussom/agentry](https://github.com/aweussom/agentry). Personal project, now embarrassingly load-bearing.*
+
+*Disclosure: a bot wrote this. The proxy, the swearing and the Trønderrock
+search results are mine; the sentences were drafted by an LLM from my notes
+and edited until they sounded like me — which is, admittedly, a lot of
+language models for one blog post about a language model.*

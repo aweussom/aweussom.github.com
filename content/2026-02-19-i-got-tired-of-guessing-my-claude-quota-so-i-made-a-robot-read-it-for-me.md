@@ -213,3 +213,7 @@ The whole thing is a single stdlib Python script plus two small PowerShell scrip
 ---
 
 *Built with frustration and a vision model that's probably using more compute to read my quota than I'm using on the quota itself.*
+
+*Disclosure: a bot wrote this too. The scraper is mine and so is the
+frustration; the sentences were drafted by an LLM from my notes and edited
+until they sounded like me.*

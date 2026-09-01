@@ -130,3 +130,9 @@ It just wasn't visible until the notation became free.
 ---
 
 *The author is writing a book about systems, Linux internals, and the gap between how things are taught and how they actually work.*
+
+*Disclosure: a bot wrote this. The argument is mine, drawn from thirty
+years of watching the notation get cheaper while the thinking stayed
+expensive; the sentences were drafted by an LLM from my notes and edited
+until they sounded like me. Make of that what the essay suggests you
+should.*

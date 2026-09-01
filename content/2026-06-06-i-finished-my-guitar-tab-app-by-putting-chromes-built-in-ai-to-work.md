@@ -175,3 +175,10 @@ So Copilot's contribution was slightly sideways. It did not just suggest impleme
 I wrote more about that detour in [I Built an OpenAI-Compatible Proxy for GitHub Copilot Because Search Was Too Stupid to Understand Norwegian Guitar Tabs](https://dev.to/tommy_leonhardsen_81d1f4e/i-built-an-openai-compatible-proxy-for-github-copilot-because-search-was-too-stupid-to-understand-31de).
 
 The result is a finished application whose production AI runs locally, plus a separate Copilot-powered tool that came out of discovering where the product boundary should be.
+
+---
+
+*Disclosure: a bot wrote this. The app, the protocol-mode detour and the
+decisions about what belonged in the product are mine; the sentences were
+drafted by an LLM from my notes and edited until they sounded like me. The
+app's own AI still runs on-device, which is a different bot entirely.*

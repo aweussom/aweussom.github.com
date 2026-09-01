@@ -219,3 +219,9 @@ development. He spent two evenings and five dollars proving that a
 benchmark's slowest model was one config field away from being its
 fastest, and the fastest was refusing to spend his money on principle.
 The werewolf was caught 137 times out of 138. It was Grimshaw.*
+
+*Disclosure: a bot wrote this. The 138 calls, the five dollars and the
+thinking-budget confound are mine; the sentences were drafted by an LLM
+from my notes and logs and edited until they sounded like me. Twelve other
+bots played the werewolf game and not one of them was asked to write it
+up.*
