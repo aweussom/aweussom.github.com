@@ -118,13 +118,18 @@ reasonable reading of the word.
 | Qwen3.8 4-bit on the iGPU (Vulkan) | 3.9 tok/s |
 
 Read that middle row again. Bonsai runs *slower on the GPU than on its
-own CPU*, because the Vulkan build has no ternary kernels, and the
-distilled model is beaten on every row by the fat base model it was
-distilled from, because the base model has kernels and it does not. The
-CPU story is the same in a different hat: the fast ternary CPU path is
-gated on AVX-512, which no consumer Intel chip has shipped since Alder
-Lake, so prompt processing falls back to a scalar loop and a 4,400-token
-prompt takes six minutes on a 24-core desktop and twenty-two on my Ryzen.
+own CPU* — the Vulkan build has no ternary kernels, so the iGPU falls
+back to generic code that four laptop cores can beat.
+
+And on every row, the 7 GB distillation loses to the 16 GB model it was
+distilled from. That is the whole story in one table: the base model has
+kernels here. Bonsai does not.
+
+The CPU rows are the same problem wearing a different hat. The fast
+ternary CPU path is gated on AVX-512, which no consumer Intel chip has
+shipped since Alder Lake, so prompt processing drops to a scalar loop —
+a 4,400-token prompt takes six minutes on a 24-core desktop and
+twenty-two on my Ryzen.
 
 Æ e faen ikke helt sikker på hvordan "runs on your laptop" endte opp som
 "runs on your laptop's CPU, slowly, if you don't send it a prompt".
