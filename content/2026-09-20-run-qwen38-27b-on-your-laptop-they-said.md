@@ -2,7 +2,7 @@ Title: Run Qwen3.8 27B on Your Laptop, They Said. It Will Be FUN, They Said.
 Date: 2026-09-20 18:00
 Slug: run-qwen38-27b-on-your-laptop-they-said
 Tags: llm, benchmarks, bonsai, ternary, intel, nvidia
-Summary: What Bonsai 2 actually delivers, measured: 1.66x the decode speed of its own base model at under half the bytes, on my RTX 5090, in the same binary. Also what it doesn't yet: my Intel laptop, my CPUs, and one very silent 27x slowdown from the installer.
+Summary: What Bonsai 2 actually delivers, measured: 1.66x the decode speed of its own base model at under half the bytes, on my RTX 5090, in the same binary. Also what it doesn't yet: my Intel laptop, my CPUs, and one very silent 27x slowdown from the installer. The laptop, for the record, is innocent.
 
 PrismML released [Bonsai 2 27B](https://prismml.com/news/bonsai-2-27b)
 this week: Qwen3.8-27B distilled to ternary weights, 5.9 GB in its
@@ -134,6 +134,28 @@ twenty-two on my Ryzen.
 Æ e faen ikke helt sikker på hvordan "runs on your laptop" endte opp som
 "runs on your laptop's CPU, slowly, if you don't send it a prompt".
 
+## In fairness to the laptop, which did nothing wrong
+
+None of that says Intel hardware cannot run a model of this size. It says
+*this* model has no kernels for it. Same machines, same OpenVINO runtime,
+one shape change:
+
+| NoLlama / OpenVINO | Model | Decode |
+|---|---|---|
+| Arc Pro B60 24 GB | Qwen3-30B-A3B int4 — MoE, 15 GB | **50.8 tok/s** |
+| Arc Pro B60 24 GB | Qwen3.8-27B int4 — dense, 15 GB | 22.9 tok/s |
+| Arc 140V, the same laptop | Qwen3-30B-A3B int4, `--offload-ratio 30` | **25.3 tok/s** |
+
+Fifty tokens a second is a working coding agent. Twenty-three is a
+perfectly civil chat. Twenty-five is the laptop that managed 1.3 on
+Bonsai, running a model of the same size.
+
+Look at *why*, because it is the thesis again wearing a different coat.
+Those top two rows are 15 GB each. The MoE reads about three billion
+parameters per token and the dense model reads all twenty-seven. Fewer
+bytes per token, twice the speed — the same lever Bonsai pulls, pulled a
+different way. On Intel, it is the one that has kernels today.
+
 ## The fairness ritual
 
 Now the part where I read the page properly. Under *Platform Coverage*
@@ -184,8 +206,10 @@ that reason.
 1. **NVIDIA card, any size from 8 GB up**: Bonsai 2. Use the CUDA build,
    check the launcher actually says `bin\cuda`, and on 8 GB take the
    PTQ1_0 file.
-2. **Intel or AMD GPU**: run the base model at whatever quant fits. Bonsai
-   has no kernels for you yet.
+2. **Intel GPU**: not Bonsai, not yet — no kernels. Run a same-size MoE
+   instead and you are at 50 tok/s on an Arc Pro B60, 25 on a laptop
+   iGPU. [NoLlama](https://github.com/aweussom/NoLlama) does this for you.
+   AMD, same answer minus the numbers; I have not measured a Radeon.
 3. **CPU**: run nothing you are in a hurry for. If you must, a 4-bit base
    quant prefills 4 to 8 times faster than Bonsai until the AVX2 kernels
    land.
