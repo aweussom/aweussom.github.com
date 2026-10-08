@@ -13,6 +13,7 @@ blog posts.
 
 <div class="kona-grid">
 <a class="kona-card" href="{filename}kona-019-skoene.md"><img src="{static}/images/kona/019-skoene/panel-1.jpg" alt="Skoene" loading="lazy"><span>Skoene</span><time>2026-10-08</time></a>
+<a class="kona-card" href="{filename}kona-018-ikke-redd.md"><img src="{static}/images/kona/018-ikke-redd/panel-1.jpg" alt="Ikke redd for noe" loading="lazy"><span>Ikke redd for noe</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-017-selektiv-horsel.md"><img src="{static}/images/kona/017-selektiv-horsel/panel-1.jpg" alt="Selektiv hørsel" loading="lazy"><span>Selektiv hørsel</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-016-badestampen.md"><img src="{static}/images/kona/016-badestampen/panel-1.jpg" alt="Badestampen" loading="lazy"><span>Badestampen</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-015-svingen.md"><img src="{static}/images/kona/015-svingen/panel-1.jpg" alt="Svingen" loading="lazy"><span>Svingen</span><time>2026-10-08</time></a>
