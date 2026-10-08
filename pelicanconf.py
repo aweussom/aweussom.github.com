@@ -12,6 +12,10 @@ THEME = "theme/wossname"
 
 ARTICLE_URL = "{slug}.html"
 ARTICLE_SAVE_AS = "{slug}.html"
+# Pages (content/pages/) sit beside the articles and stay out of the feed,
+# so dev.to never mirrors them. The comic lives here.
+PAGE_URL = "{slug}.html"
+PAGE_SAVE_AS = "{slug}.html"
 DEFAULT_PAGINATION = False
 DEFAULT_DATE_FORMAT = "%Y-%m-%d"
 

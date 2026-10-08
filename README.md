@@ -39,6 +39,17 @@ page lives in the `wossname-books` org (aweussom is owner).
 Backdating works — `Date:` is trusted as written. Ordering, archives,
 and feeds all follow it.
 
+### The comic page (Kona & Co)
+
+`content/pages/kona.md` is generated, never edited by hand:
+`python scripts/kona_page.py` reads the publishing log in the comic repo
+(`C:\devel\aweussom\python\konaogco\prosjekter\kona\publisert\facebook-profile\`,
+one dated symlink per strip that has gone out), converts the strips to
+JPEG under `content/images/kona/`, and writes the page newest first.
+`--check` says whether anything changed. It is a Pelican *page*, so it is
+outside the Atom feed and dev.to never mirrors it. Commit the regenerated
+page and images together with the new strip's symlink in the comic repo.
+
 ### Drafts and ideas (local only)
 
 `ideas/` (post backlog) and `blog_drafts/` (posts in progress) are

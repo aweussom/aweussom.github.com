@@ -172,3 +172,8 @@ footer.site a { color: var(--ink-soft); }
   .highlight .m, .highlight .mi, .highlight .mf { color: #e07a72; }
   .highlight .nb, .highlight .bp { color: #b18ae0; }
 }
+
+/* Kona & Co: vertical strips, one column, not the full text width. */
+.page-kona img { display: block; max-width: 560px; margin: 0 auto; }
+.page-kona h2 { margin-top: 2.5rem; }
+.page-kona time { color: var(--muted, #777); font-family: "IBM Plex Mono", monospace; font-size: 0.85rem; }
