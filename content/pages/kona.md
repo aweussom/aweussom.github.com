@@ -12,6 +12,7 @@ blog posts.
 
 
 <div class="kona-grid">
+<a class="kona-card" href="{filename}kona-017-selektiv-horsel.md"><img src="{static}/images/kona/017-selektiv-horsel/panel-1.jpg" alt="Selektiv hørsel" loading="lazy"><span>Selektiv hørsel</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-015-svingen.md"><img src="{static}/images/kona/015-svingen/panel-1.jpg" alt="Svingen" loading="lazy"><span>Svingen</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-014-firehjulstrekk.md"><img src="{static}/images/kona/014-firehjulstrekk/panel-1.jpg" alt="Firehjulstrekk" loading="lazy"><span>Firehjulstrekk</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-013-byttet.md"><img src="{static}/images/kona/013-byttet/panel-1.jpg" alt="Byttet" loading="lazy"><span>Byttet</span><time>2026-10-08</time></a>
