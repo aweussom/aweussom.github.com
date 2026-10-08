@@ -12,6 +12,7 @@ blog posts.
 
 
 <div class="kona-grid">
+<a class="kona-card" href="{filename}kona-021-torrfor.md"><img src="{static}/images/kona/021-torrfor/panel-1.jpg" alt="Tørrfor" loading="lazy"><span>Tørrfor</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-020-lanebjeff.md"><img src="{static}/images/kona/020-lanebjeff/panel-1.jpg" alt="Lånebjeff" loading="lazy"><span>Lånebjeff</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-019-skoene.md"><img src="{static}/images/kona/019-skoene/panel-1.jpg" alt="Skoene" loading="lazy"><span>Skoene</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-018-ikke-redd.md"><img src="{static}/images/kona/018-ikke-redd/panel-1.jpg" alt="Ikke redd for noe" loading="lazy"><span>Ikke redd for noe</span><time>2026-10-08</time></a>
