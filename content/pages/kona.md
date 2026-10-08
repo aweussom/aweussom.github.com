@@ -3,75 +3,25 @@ Slug: kona
 Summary: A daily Norwegian comic about Kona, me and the dogs; the strips that have been published so far.
 
 Kona & Co is my daily comic: me, Kona, and the dogs Missy and Saga. Dry
-Norwegian everyday humour, four vertical panels, cross-stitch embroideries
-with rude text on the wall. In Norwegian, because that is the language it
-happens in. One strip a day on Facebook; this page collects the ones that
-have gone out, newest first. Drawn with image models from a short draft and
-a set of character cards; the tooling is described in the blog posts.
+Norwegian everyday humour, cross-stitch embroideries with rude text on the
+wall. In Norwegian, because that is the language it happens in. One strip a
+day on Facebook; this page collects the ones that have gone out, newest
+first. Click one to read it panel by panel. Drawn with image models from a
+short draft and a set of character cards; the tooling is described in the
+blog posts.
 
 
-## Sekken
-
-<time>2026-10-08</time>
-
-![Sekken]({static}/images/kona/010-sekken.jpg)
-
-## Vekkerklokka
-
-<time>2026-10-07</time>
-
-![Vekkerklokka]({static}/images/kona/009-vekkerklokka.jpg)
-
-## Steppeulven
-
-<time>2026-10-07</time>
-
-![Steppeulven]({static}/images/kona/008-saga-steppeulv.jpg)
-
-## Saga og den lange armen
-
-<time>2026-10-05</time>
-
-![Saga og den lange armen]({static}/images/kona/005-saga-lang-arm.jpg)
-
-## Rådyr
-
-<time>2026-10-04</time>
-
-![Rådyr]({static}/images/kona/001-radyr.jpg)
-
-## Missy bades
-
-<time>2026-10-03</time>
-
-![Missy bades]({static}/images/kona/004-missy-bades.jpg)
-
-## Tjueén hundeminutter
-
-<time>2026-09-30</time>
-
-![Tjueén hundeminutter]({static}/images/kona/007-hundeminutter.jpg)
-
-## Missy spiser all maten
-
-<time>2026-09-30</time>
-
-![Missy spiser all maten]({static}/images/kona/002-missy-spiser-all-maten.jpg)
-
-## Kona gikk fra meg
-
-<time>2026-09-28</time>
-
-![Kona gikk fra meg]({static}/images/kona/000-kona-gikk-fra-meg.jpg)
-
-## Vuku-runden
-
-<time>2026-09-27</time>
-
-![Vuku-runden]({static}/images/kona/006-vuku-runden.jpg)
-
-## Kona shopper til Missy
-
-<time>2026-09-26</time>
-
-![Kona shopper til Missy]({static}/images/kona/003-kona-shopper-til-missy.jpg)
+<div class="kona-grid">
+<a class="kona-card" href="{filename}kona-013-byttet.md"><img src="{static}/images/kona/013-byttet/panel-1.jpg" alt="Byttet" loading="lazy"><span>Byttet</span><time>2026-10-08</time></a>
+<a class="kona-card" href="{filename}kona-010-sekken.md"><img src="{static}/images/kona/010-sekken/strip.jpg" alt="Sekken" loading="lazy"><span>Sekken</span><time>2026-10-08</time></a>
+<a class="kona-card" href="{filename}kona-009-vekkerklokka.md"><img src="{static}/images/kona/009-vekkerklokka/strip.jpg" alt="Vekkerklokka" loading="lazy"><span>Vekkerklokka</span><time>2026-10-07</time></a>
+<a class="kona-card" href="{filename}kona-008-saga-steppeulv.md"><img src="{static}/images/kona/008-saga-steppeulv/strip.jpg" alt="Steppeulven" loading="lazy"><span>Steppeulven</span><time>2026-10-07</time></a>
+<a class="kona-card" href="{filename}kona-005-saga-lang-arm.md"><img src="{static}/images/kona/005-saga-lang-arm/strip.jpg" alt="Saga og den lange armen" loading="lazy"><span>Saga og den lange armen</span><time>2026-10-05</time></a>
+<a class="kona-card" href="{filename}kona-001-radyr.md"><img src="{static}/images/kona/001-radyr/strip.jpg" alt="Rådyr" loading="lazy"><span>Rådyr</span><time>2026-10-04</time></a>
+<a class="kona-card" href="{filename}kona-004-missy-bades.md"><img src="{static}/images/kona/004-missy-bades/strip.jpg" alt="Missy bades" loading="lazy"><span>Missy bades</span><time>2026-10-03</time></a>
+<a class="kona-card" href="{filename}kona-007-hundeminutter.md"><img src="{static}/images/kona/007-hundeminutter/strip.jpg" alt="Tjueén hundeminutter" loading="lazy"><span>Tjueén hundeminutter</span><time>2026-09-30</time></a>
+<a class="kona-card" href="{filename}kona-002-missy-spiser-all-maten.md"><img src="{static}/images/kona/002-missy-spiser-all-maten/strip.jpg" alt="Missy spiser all maten" loading="lazy"><span>Missy spiser all maten</span><time>2026-09-30</time></a>
+<a class="kona-card" href="{filename}kona-000-kona-gikk-fra-meg.md"><img src="{static}/images/kona/000-kona-gikk-fra-meg/strip.jpg" alt="Kona gikk fra meg" loading="lazy"><span>Kona gikk fra meg</span><time>2026-09-28</time></a>
+<a class="kona-card" href="{filename}kona-006-vuku-runden.md"><img src="{static}/images/kona/006-vuku-runden/strip.jpg" alt="Vuku-runden" loading="lazy"><span>Vuku-runden</span><time>2026-09-27</time></a>
+<a class="kona-card" href="{filename}kona-003-kona-shopper-til-missy.md"><img src="{static}/images/kona/003-kona-shopper-til-missy/strip.jpg" alt="Kona shopper til Missy" loading="lazy"><span>Kona shopper til Missy</span><time>2026-09-26</time></a>
+</div>
