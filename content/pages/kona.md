@@ -12,6 +12,7 @@ blog posts.
 
 
 <div class="kona-grid">
+<a class="kona-card" href="{filename}kona-014-firehjulstrekk.md"><img src="{static}/images/kona/014-firehjulstrekk/panel-1.jpg" alt="Firehjulstrekk" loading="lazy"><span>Firehjulstrekk</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-013-byttet.md"><img src="{static}/images/kona/013-byttet/panel-1.jpg" alt="Byttet" loading="lazy"><span>Byttet</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-010-sekken.md"><img src="{static}/images/kona/010-sekken/strip.jpg" alt="Sekken" loading="lazy"><span>Sekken</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-009-vekkerklokka.md"><img src="{static}/images/kona/009-vekkerklokka/strip.jpg" alt="Vekkerklokka" loading="lazy"><span>Vekkerklokka</span><time>2026-10-07</time></a>
