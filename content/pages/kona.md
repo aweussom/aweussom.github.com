@@ -23,7 +23,7 @@ blog posts.
 <a class="kona-card" href="{filename}kona-013-byttet.md"><img src="{static}/images/kona/013-byttet/panel-1.jpg" alt="Byttet" loading="lazy"><span>Byttet</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-010-sekken.md"><img src="{static}/images/kona/010-sekken/strip.jpg" alt="Sekken" loading="lazy"><span>Sekken</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-009-vekkerklokka.md"><img src="{static}/images/kona/009-vekkerklokka/panel-1.jpg" alt="Vekkerklokka" loading="lazy"><span>Vekkerklokka</span><time>2026-10-07</time></a>
-<a class="kona-card" href="{filename}kona-008-saga-steppeulv.md"><img src="{static}/images/kona/008-saga-steppeulv/strip.jpg" alt="Steppeulven" loading="lazy"><span>Steppeulven</span><time>2026-10-07</time></a>
+<a class="kona-card" href="{filename}kona-008-saga-steppeulv.md"><img src="{static}/images/kona/008-saga-steppeulv/panel-1.jpg" alt="Steppeulven" loading="lazy"><span>Steppeulven</span><time>2026-10-07</time></a>
 <a class="kona-card" href="{filename}kona-005-saga-lang-arm.md"><img src="{static}/images/kona/005-saga-lang-arm/strip.jpg" alt="Saga og den lange armen" loading="lazy"><span>Saga og den lange armen</span><time>2026-10-05</time></a>
 <a class="kona-card" href="{filename}kona-001-radyr.md"><img src="{static}/images/kona/001-radyr/strip.jpg" alt="Rådyr" loading="lazy"><span>Rådyr</span><time>2026-10-04</time></a>
 <a class="kona-card" href="{filename}kona-004-missy-bades.md"><img src="{static}/images/kona/004-missy-bades/strip.jpg" alt="Missy bades" loading="lazy"><span>Missy bades</span><time>2026-10-03</time></a>
