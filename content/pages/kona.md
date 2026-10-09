@@ -31,5 +31,5 @@ blog posts.
 <a class="kona-card" href="{filename}kona-002-missy-spiser-all-maten.md"><img src="{static}/images/kona/002-missy-spiser-all-maten/panel-1.jpg" alt="Missy spiser all maten" loading="lazy"><span>Missy spiser all maten</span><time>2026-09-30</time></a>
 <a class="kona-card" href="{filename}kona-000-kona-gikk-fra-meg.md"><img src="{static}/images/kona/000-kona-gikk-fra-meg/panel-1.jpg" alt="Kona gikk fra meg" loading="lazy"><span>Kona gikk fra meg</span><time>2026-09-28</time></a>
 <a class="kona-card" href="{filename}kona-006-vuku-runden.md"><img src="{static}/images/kona/006-vuku-runden/panel-1.jpg" alt="Vuku-runden" loading="lazy"><span>Vuku-runden</span><time>2026-09-27</time></a>
-<a class="kona-card" href="{filename}kona-003-kona-shopper-til-missy.md"><img src="{static}/images/kona/003-kona-shopper-til-missy/strip.jpg" alt="Kona shopper til Missy" loading="lazy"><span>Kona shopper til Missy</span><time>2026-09-26</time></a>
+<a class="kona-card" href="{filename}kona-003-kona-shopper-til-missy.md"><img src="{static}/images/kona/003-kona-shopper-til-missy/panel-1.jpg" alt="Kona shopper til Missy" loading="lazy"><span>Kona shopper til Missy</span><time>2026-09-26</time></a>
 </div>
