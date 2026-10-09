@@ -24,7 +24,7 @@ blog posts.
 <a class="kona-card" href="{filename}kona-010-sekken.md"><img src="{static}/images/kona/010-sekken/panel-1.jpg" alt="Sekken" loading="lazy"><span>Sekken</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-009-vekkerklokka.md"><img src="{static}/images/kona/009-vekkerklokka/panel-1.jpg" alt="Vekkerklokka" loading="lazy"><span>Vekkerklokka</span><time>2026-10-07</time></a>
 <a class="kona-card" href="{filename}kona-008-saga-steppeulv.md"><img src="{static}/images/kona/008-saga-steppeulv/panel-1.jpg" alt="Steppeulven" loading="lazy"><span>Steppeulven</span><time>2026-10-07</time></a>
-<a class="kona-card" href="{filename}kona-005-saga-lang-arm.md"><img src="{static}/images/kona/005-saga-lang-arm/strip.jpg" alt="Saga og den lange armen" loading="lazy"><span>Saga og den lange armen</span><time>2026-10-05</time></a>
+<a class="kona-card" href="{filename}kona-005-saga-lang-arm.md"><img src="{static}/images/kona/005-saga-lang-arm/panel-1.jpg" alt="Saga og den lange armen" loading="lazy"><span>Saga og den lange armen</span><time>2026-10-05</time></a>
 <a class="kona-card" href="{filename}kona-001-radyr.md"><img src="{static}/images/kona/001-radyr/panel-1.jpg" alt="Rådyr" loading="lazy"><span>Rådyr</span><time>2026-10-04</time></a>
 <a class="kona-card" href="{filename}kona-004-missy-bades.md"><img src="{static}/images/kona/004-missy-bades/panel-1.jpg" alt="Missy bades" loading="lazy"><span>Missy bades</span><time>2026-10-03</time></a>
 <a class="kona-card" href="{filename}kona-007-hundeminutter.md"><img src="{static}/images/kona/007-hundeminutter/strip.jpg" alt="Tjueén hundeminutter" loading="lazy"><span>Tjueén hundeminutter</span><time>2026-09-30</time></a>
