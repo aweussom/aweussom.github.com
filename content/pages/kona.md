@@ -12,6 +12,9 @@ blog posts.
 
 
 <div class="kona-grid">
+<a class="kona-card" href="{filename}kona-023-hundefabrikken.md"><img src="{static}/images/kona/023-hundefabrikken/panel-1.jpg" alt="Hundefabrikken" loading="lazy"><span>Hundefabrikken</span><time>2026-10-14</time></a>
+<a class="kona-card" href="{filename}kona-022-osteskiva.md"><img src="{static}/images/kona/022-osteskiva/panel-1.jpg" alt="Hundekjeksen" loading="lazy"><span>Hundekjeksen</span><time>2026-10-14</time></a>
+<a class="kona-card" href="{filename}kona-012-elefanten.md"><img src="{static}/images/kona/012-elefanten/panel-1.jpg" alt="Elefanten" loading="lazy"><span>Elefanten</span><time>2026-10-10</time></a>
 <a class="kona-card" href="{filename}kona-011-bare-en-hund.md"><img src="{static}/images/kona/011-bare-en-hund/panel-1.jpg" alt="Bare én hund" loading="lazy"><span>Bare én hund</span><time>2026-10-09</time></a>
 <a class="kona-card" href="{filename}kona-021-torrfor.md"><img src="{static}/images/kona/021-torrfor/panel-1.jpg" alt="Tørrfor" loading="lazy"><span>Tørrfor</span><time>2026-10-08</time></a>
 <a class="kona-card" href="{filename}kona-020-lanebjeff.md"><img src="{static}/images/kona/020-lanebjeff/panel-1.jpg" alt="Lånebjeff" loading="lazy"><span>Lånebjeff</span><time>2026-10-08</time></a>

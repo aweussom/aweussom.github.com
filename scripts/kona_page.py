@@ -15,7 +15,8 @@ never mirrors them):
 - kona-<stem>.md, the viewer for one strip: the portrait panels from
   prosjekter/kona/paneler/<stem>/ stacked, each scaled to fit the screen
   height on a desktop and the width on a phone. Strips without portrait
-  panels get the strip image itself.
+  panels get the strip image itself. Strips drawn as panels from the start
+  have no striper/ file, so they get no "strip as one image" link.
 
 Images go under content/images/kona/<stem>/.
 """
@@ -60,9 +61,12 @@ def published() -> list[tuple[str, str, Path]]:
             m = re.match(r"(\d{4}-\d{2}-\d{2})_(.+)\.(png|jpg)$", p.name)
             if not m:
                 continue
-            date, stem, ext = m.groups()
+            date, stem, _ext = m.groups()
             if stem not in first or date < first[stem][0]:
-                first[stem] = (date, COMIC / "striper" / f"{stem}.{ext}")
+                # strips drawn as panels from the start have no striper/ file
+                strip = next((q for q in sorted((COMIC / "striper").glob(f"{stem}.*"))
+                              if q.suffix.lower() in (".png", ".jpg")), None)
+                first[stem] = (date, strip)
     return sorted(((d, stem, t) for stem, (d, t) in first.items()), reverse=True)
 
 
@@ -110,7 +114,8 @@ def main() -> None:
     for date, stem, strip in strips:
         title = title_of(stem)
         panels = sorted((COMIC / "paneler" / stem).glob("*.jpg"), key=lambda p: int(p.stem)) if (COMIC / "paneler" / stem).exists() else []
-        b.image(strip, IMG / stem / "strip.jpg")
+        if strip:
+            b.image(strip, IMG / stem / "strip.jpg")
         for p in panels:
             b.image(p, IMG / stem / f"panel-{p.stem}.jpg")
         thumb = f"panel-{panels[0].stem}.jpg" if panels else "strip.jpg"
@@ -124,9 +129,10 @@ def main() -> None:
             for p in panels:
                 view.append(f'<img src="{{static}}/images/kona/{stem}/panel-{p.stem}.jpg" alt="{title}, panel {p.stem}">')
             view.append("</div>")
-            view.append("")
-            view.append(f'<p class="kona-strip-link"><a href="{{static}}/images/kona/{stem}/strip.jpg">The strip as one image</a></p>')
-        else:
+            if strip:
+                view.append("")
+                view.append(f'<p class="kona-strip-link"><a href="{{static}}/images/kona/{stem}/strip.jpg">The strip as one image</a></p>')
+        elif strip:
             view.append('<div class="kona-reader kona-reader-strip">')
             view.append(f'<img src="{{static}}/images/kona/{stem}/strip.jpg" alt="{title}">')
             view.append("</div>")
