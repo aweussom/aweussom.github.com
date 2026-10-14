@@ -12,6 +12,8 @@ blog posts.
 
 
 <div class="kona-grid">
+<a class="kona-card" href="{filename}kona-024-essensen-av-hund.md"><img src="{static}/images/kona/024-essensen-av-hund/panel-1.jpg" alt="Essensen av hund" loading="lazy"><span>Essensen av hund</span><time>2026-10-14</time></a>
+<a class="kona-card" href="{filename}kona-023-oppskriften-pa-hund.md"><img src="{static}/images/kona/023-oppskriften-pa-hund/panel-1.jpg" alt="Oppskriften på hund" loading="lazy"><span>Oppskriften på hund</span><time>2026-10-14</time></a>
 <a class="kona-card" href="{filename}kona-022-osteskiva.md"><img src="{static}/images/kona/022-osteskiva/panel-1.jpg" alt="Hundekjeksen" loading="lazy"><span>Hundekjeksen</span><time>2026-10-14</time></a>
 <a class="kona-card" href="{filename}kona-012-elefanten.md"><img src="{static}/images/kona/012-elefanten/panel-1.jpg" alt="Elefanten" loading="lazy"><span>Elefanten</span><time>2026-10-10</time></a>
 <a class="kona-card" href="{filename}kona-011-bare-en-hund.md"><img src="{static}/images/kona/011-bare-en-hund/panel-1.jpg" alt="Bare én hund" loading="lazy"><span>Bare én hund</span><time>2026-10-09</time></a>
