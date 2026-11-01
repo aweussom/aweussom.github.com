@@ -78,7 +78,11 @@ The API key was used twice: the one clip, and the voices, because agentry does n
 
 Grok's video tool through agentry has a six second floor and needs the account's training opt-in switched on, which is account-wide. The API has neither problem. These are the things a demo built on "no API key" has to say out loud.
 
-The Grok strips do not look like the codex strips. For a demo whose point is "same cast, two backends" that is fine. For a series it would not be.
+The Grok strip does not look like the codex one. Same two people from the same cards, but drawn like a 3D animated film, at full length, faces small. Part of that was my canon, which asked for a 3D film look.
+
+On 1 November I tried to pull it over: a canon that describes the cards as drawn with ink outlines, and then a finished codex panel as a style reference. The outlines came. The washed-out colours and the distance stayed, and the reference panel changed close to nothing.
+
+For a demo whose point is "same cast, two backends" that is fine. For a series, pick one backend.
 
 ## The repo, and an installer for my brother
 
