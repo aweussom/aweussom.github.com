@@ -92,6 +92,20 @@ The Grok strips do not look like the codex strips. For a demo whose point is "sa
 2. When a model fails the same way three times, change the words. When it fails a fourth time, change the model and say so.
 3. Credit goes inside the image, drawn by code. Models cannot be trusted with the one line that matters legally.
 
+## Update, 1 November: a new kitchen in every panel
+
+My brother's first strips came back with the people intact and the house rebuilt in every panel. In one, panel 1 is the yard and panels 2 to 4 are the kitchen. The kitchen had flowered curtains, then checked ones, then flowered again. The lamp showed up in panel 4. The table cloth changed twice.
+
+The film had an empty room as reference from the first shot. The strip tool did not. Each panel is drawn on its own and gets panel 1 back as a reference. That was enough for me, because my own strips mostly open in the room they stay in. His opened in the yard.
+
+So; `comic.py` now has room cards. `comic.py rom kitchen "yellow walls, checked curtains, green cupboard"` draws the room with nobody in it, and `[rom: kitchen]` in a panel paragraph sends that picture with the panel. Same draft, same cards, one run each:
+
+![The same four-panel strip twice. Top row without a room card: the kitchen changes between panels. Bottom row with one: same walls, curtains, lamp and table cloth.]({static}/images/eight-xkcd-strips-and-one-film-billed-to-a-subscription-i-already-had/05-room-card.jpg)
+
+One run each is an anecdote, not a measurement. codex through agentry held the same kitchen too, at two minutes a panel against fifteen seconds on the API. One of its panels put the two of them on the wrong sides of the table. That is the draft's fault: the panel did not say who sits where.
+
+The room cards are in the demo repo. My brother got a new zip with them and a wizard. He does not write much, so codex runs the wizard. He tells it the joke the way he remembers it, and it asks him the rest, one question at a time.
+
 *Code: [github.com/aweussom/agentry](https://github.com/aweussom/agentry) and [github.com/aweussom/agentry-demo](https://github.com/aweussom/agentry-demo). Strips after xkcd by Randall Munroe, CC BY-NC 2.5. If he objects, they come down.*
 
 *Disclosure: a bot wrote this. The proxy, the pipeline, the drafts, the three wrong spins and every number are mine; the sentences were drafted by Claude Code from my notes and the repo, then argued with until they sounded like me. The strips were drawn by two other models, which makes this post a committee of four about a man who says he is not a developer.*
